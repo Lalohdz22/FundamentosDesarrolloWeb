@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos JS</title>
+
+    <style>
+        .container {
+            display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        }
+    .element {
+        width: 200px;
+        height: 200px;
+        background-color: aquamarine;
+        text-align: center;
+        font-weight: bold;
+    }
+</style>
+</head>
+
+
+<body onload="saludar()">
+
+    <button onclick="crearElemento()">Agregar elemento</button>
+    <input type="text">
+    <br></br>
+
+    <br> 
+    <label>R</label>
+    <input type="number" id="r" min="0" max="255">
+
+    <label>G</label>
+    <input type="number" id="g" min="0" max="255">
+
+    <label>B</label>
+    <input type="number" id="b" min="0" max="255">
+    </br>
+    <br></br>
+    <div class="container">
+
+    </div>
+    <script>
+    const container = document.querySelector(".container");
+    const inputTexto = document.querySelector("input[type='text']");
+    
+    const inputR = document.getElementById("r");
+    const inputG = document.getElementById("g");
+    const inputB = document.getElementById("b");
+
+    let counter = 0;
+
+    function crearElemento(){
+        counter++;
+
+        const element = document.createElement("div");
+        element.textContent = inputTexto.value;
+        element.classList.add("element");
+
+        // Obtener valores RGB
+        const r = inputR.value || 0;
+        const g = inputG.value || 0;
+        const b = inputB.value || 0;
+
+        // Aplicar color dinámico
+        element.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+
+        container.appendChild(element);
+
+        inputTexto.value = "";
+    }
+</script>
+    
+</body>
+</html>

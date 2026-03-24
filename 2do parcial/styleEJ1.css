@@ -1,0 +1,49 @@
+/* Reset básico */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+.header {
+    background-color: orange;
+    font-weight: bold;
+    font-size: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Contenedor principal */
+.contenedor {
+    display: flex;
+    min-height: 100vh; /* altura del viewport */
+}
+
+/* Columnas */
+.lado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #555;
+}
+
+/* Proporción 1:2:1 */
+.izquierdo {
+    flex: 1;
+}
+
+.centro {
+    flex: 2;
+    background-color: #ddd;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.derecho {
+    flex: 1;
+}

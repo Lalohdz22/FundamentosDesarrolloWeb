@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.contenedor {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* 🔹 Hasta 600px → 1 columna */
+@media (max-width: 600px) {
+    .contenedor {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 🔹 De 600px a 1200px → 2 columnas */
+@media (min-width: 600px) and (max-width: 1200px) {
+    .contenedor {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* 🔹 Más de 1200px → 3 columnas */
+@media (min-width: 1200px) {
+    .contenedor {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+/* Opcional: que el título ocupe todo el ancho */
+h1 {
+    grid-column: 1 / -1;
+}
