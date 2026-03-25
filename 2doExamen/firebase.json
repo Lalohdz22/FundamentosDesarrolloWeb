@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "2doExamen",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
